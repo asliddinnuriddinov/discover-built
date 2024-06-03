@@ -23,7 +23,8 @@ const Nav = () => {
             const size=window.innerWidth>=768;
             size&&setIsOpen(false)
             setIsmd(!size)
-            setNavbarSolid(!isTop);
+            const isProjectsPage = pathname === '/projects'|| pathname === '/news'; 
+            setNavbarSolid(!isTop || isProjectsPage); 
         };
     
         // Initial check for scroll position and screen size
@@ -38,7 +39,7 @@ const Nav = () => {
             window.removeEventListener('scroll', handleScroll);
             window.addEventListener('resize',handleScroll)
         };
-    }, []);
+    }, [pathname]);
   return (
     <nav className={`${navbarSolid||isOpen&&isMd ? 'bg-white' : 'bg-transparent'} py-6 fixed top-0 left-0 w-full z-50 transition-colors duration-500`}>
         <Container>
@@ -51,7 +52,7 @@ const Nav = () => {
             </Link>
         </div>
         
-        <ul className='flex items-center gap-0 lg:gap-8'>
+        <ul className='flex items-center gap-3 lg:gap-8'>
             <li>
               <Link href={'/about'} className={`flex items-center gap-4 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
                 <div className={`w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${pathname=='/about'&&'scale-100 opacity-100'}`}>
@@ -61,21 +62,21 @@ const Nav = () => {
             </li>
             <li>
                 <Link href={'/projects'} className={`flex items-center gap-4 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
-                <div className='w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100'>
+                <div className={`w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${pathname=='/projects'&&'scale-100 opacity-100'}`}>
                 </div>
                 Проекты
                 </Link> 
             </li>
             <li>
-                <Link href={'/'} className={`flex items-center gap-4 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
-                <div className='w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100'>
+                <Link href={'/news'} className={`flex items-center gap-4 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
+                <div className={`w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${pathname=='/news'&&'scale-100 opacity-100'}`}>
                 </div>
                 Новости
                 </Link> 
             </li>
             <li>
-                <Link href={'/'} className={`flex items-center gap-4 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
-                <div className='w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100'>
+                <Link href={'/contacts'} className={`flex items-center gap-3 group text-[14px] lg:text-[16px] ${navbarSolid?'text-black':'text-white'} transition-colors duration-300`}>
+                <div className={`w-[7px] h-[7px] bg-main rotate-45 scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${pathname=='/contacts'&&'scale-100 opacity-100'}`}>
                 </div>
                 Контакты
                 </Link> 
@@ -112,9 +113,9 @@ const Nav = () => {
         </div>
 
 
-            <Link className='text-white text-[14px] lg:text-xl bg-main p-[5px] lg:p-2' href={'tel:+998712888888'}>
+            <a className='text-white text-[14px] lg:text-xl bg-main p-[5px] lg:p-2' href={'tel:+998712888888'}>
                 <FaPhoneAlt/>
-            </Link>
+            </a>
         </div>
 
         </div>
@@ -149,22 +150,22 @@ const Nav = () => {
                 <Container>
                     <ul className='flex flex-col gap-8'>
                         <li>
-                        <Link href={'/a'} className={`text-[16px] sm:text-lg`}>
+                        <Link onClick={e=>setIsOpen(false)} href={'/about'} className={`text-[16px] sm:text-lg ${pathname=='/about'&&'text-main'}`}>
                             О компании
                             </Link> 
                         </li>
                         <li>
-                            <Link href={'/projects'} className={`text-[16px] sm:text-lg`}>
+                            <Link onClick={e=>setIsOpen(false)} href={'/projects'} className={`text-[16px] sm:text-lg ${pathname=='/projects'&&'text-main'}`}>
                             Проекты
                             </Link> 
                         </li>
                         <li>
-                            <Link href={'/'} className={`text-[16px] sm:text-lg`}>
+                            <Link onClick={e=>setIsOpen(false)} href={'/news'} className={`text-[16px] sm:text-lg ${pathname=='/news'&&'text-main'}`}>
                             Новости
                             </Link> 
                         </li>
                         <li>
-                            <Link href={'/'} className={`text-[16px] sm:text-lg`}>
+                            <Link onClick={e=>setIsOpen(false)} href={'/contacts'} className={`text-[16px] sm:text-lg ${pathname=='/contacts'&&'text-main'}`}>
                             Контакты
                             </Link> 
                         </li>

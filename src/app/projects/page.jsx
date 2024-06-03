@@ -1,8 +1,13 @@
+import Banner from '@/components/projects/Banner'
+import Projects from '@/components/projects/Projects'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+      <Banner/>
+      <Projects/>
+    </>
   )
 }
 

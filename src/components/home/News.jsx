@@ -7,6 +7,7 @@ import {Swiper,SwiperSlide} from 'swiper/react'
 
 import 'swiper/css';
 import { Autoplay, FreeMode } from 'swiper/modules';
+import Link from 'next/link'
 
 const News = () => {
   return (
@@ -62,11 +63,11 @@ const News = () => {
                 </Swiper>
             </div>
             <div  className='flex justify-center'>
-                <a className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[120px] sm:w-[150px] lg:h-[60px] lg:w-[205px] group" href="/news">
+                <Link className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[120px] sm:w-[150px] lg:h-[60px] lg:w-[205px] group" href="/news">
                     <span className='w-full h-full sm:text-[16px] text-sm absolute flex items-center justify-center group-hover:bg-main group-hover:text-white group-hover:left-0 group-hover:bottom-0 left-[-10%] bottom-[-20%] transition-all duration-500 border-[1px] border-main'>
                     Все новости
                     </span>
-                </a>
+                </Link>
                 </div>
         </Container>
     </div>

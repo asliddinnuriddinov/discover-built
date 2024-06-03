@@ -7,6 +7,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { z } from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod'
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
   const scheme=z.object({
@@ -16,6 +17,7 @@ const Footer = () => {
   const {handleSubmit,register, reset, formState:{isDirty,isSubmitting,errors}}=useForm({
     resolver: zodResolver(scheme)
   })
+  const pathname=usePathname()
 
   const onSubmit =async({phone,name})=>{
     try{
@@ -30,7 +32,7 @@ const Footer = () => {
       toast.error("Couldn't send")
     }
   }
-  return (
+  return pathname!='/contacts'&& (
     <footer className='flex flex-col xl:flex-row items-center'>
       <div style={{backgroundImage:"url(/bg-footer.png)"}} className='bg-cover bg-center w-full xl:w-[50%] px-5 md:px-12 py-5'>
           <Title t1={'Контакты'}/>

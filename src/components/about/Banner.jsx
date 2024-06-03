@@ -14,7 +14,7 @@ const Banner = () => {
                 <p className='lg:text-xl sm:text-lg text-sm font-semibold my-14 max-w-[700px]'>
                     Мы не просто создаём проекты, мы создаем новые возможности. Строя объекты государственного масштаба, мы строим будущее.
                 </p>
-                <a className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[150px] sm:w-[190px] lg:h-[60px] lg:w-[205px] group" href="#projects">
+                <a className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[150px] sm:w-[190px] lg:h-[60px] lg:w-[205px] group" href="/presentation.pdf">
                     <span className='w-full font-bold text-white h-full sm:text-[16px] text-[12px] absolute flex items-center justify-center group-hover:left-0 group-hover:bottom-0 left-[-4%] sm:left-[-10%] bottom-[-20%] transition-all duration-500 bg-main border-[1px] border-main'>
                         Скачать презентацию
                     </span>

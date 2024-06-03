@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../Container'
 import Title from './Title'
 import ProjectsCard from './ProjectsCard'
+import Link from 'next/link'
 
 const Projects = () => {
   return (
@@ -20,11 +21,11 @@ const Projects = () => {
                     <ProjectsCard ind={6} img={'/boulevard.webp'} title={'Boulevard'} desc={"t('projects.p6')"} />
                 </div>
                 <div className='flex justify-center'>
-                <a className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[120px] sm:w-[150px] lg:h-[60px] lg:w-[205px] group" href="/projects">
+                <Link className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[120px] sm:w-[150px] lg:h-[60px] lg:w-[205px] group" href="/projects">
                     <span className='w-full h-full sm:text-[16px] text-sm absolute flex items-center justify-center group-hover:bg-main group-hover:text-white group-hover:left-0 group-hover:bottom-0 left-[-10%] bottom-[-20%] transition-all duration-500 border-[1px] border-main'>
                     Все проекты
                     </span>
-                </a>
+                </Link>
                 </div>
             </div>
         </Container>
