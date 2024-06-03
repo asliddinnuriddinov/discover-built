@@ -13,12 +13,12 @@ const Projects = () => {
                     <Title t1={'Наши'} t2={'проекты'}/>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[370px,370px,370px] gap-5 md:gap-6 lg:gap-12 mb-12">
-                    <ProjectsCard ind={1} img={'/magic.webp'} title={'Magic City'} desc={"t('projects.p1')"} />
-                    <ProjectsCard ind={2} img={'/gardens.webp'} title={'Gardens Residence'} desc={"t('projects.p2')"} />
-                    <ProjectsCard ind={3} img={'/fonon.webp'} title={'Fonon'} desc={"t('projects.p3')"} />
-                    <ProjectsCard ind={4} img={'/invento.webp'} title={'Invento'} desc={"t('projects.p4')"} />
-                    <ProjectsCard ind={5} img={'/school.webp'} title={'Presedential School'} desc={"t('projects.p5')"} />
-                    <ProjectsCard ind={6} img={'/boulevard.webp'} title={'Boulevard'} desc={"t('projects.p6')"} />
+                    <ProjectsCard ind={1} img={'/magic.webp'} title={'Magic City'} desc={"Это масштабный социально-значимый проект. Культурно-развлекательный кластер в Ташкенте является одной из новых достопримечательностей."} />
+                    <ProjectsCard ind={2} img={'/gardens.webp'} title={'Gardens Residence'} desc={"Многофункциональный жилой комплекс, созданный для обеспечения комфорта жителям Узбекистана."} />
+                    <ProjectsCard ind={3} img={'/fonon.webp'} title={'Fonon'} desc={"Fonon – завод по производству ювелирных изделий в Узбекистане построенный на основе итальянских в 2020 году. Fonon является единственным крупным предприятием в Средней Азии, производящим украшения из драгоценных металлов в европейском и восточном стиле."} />
+                    <ProjectsCard ind={4} img={'/invento.webp'} title={'Invento'} desc={"Грандиозный жилой квартал в сердце столицы."} />
+                    <ProjectsCard ind={5} img={'/school.webp'} title={'Presedential School'} desc={"Международный детский сад и школа расположенный в международном деловом центре Tashkent City."} />
+                    <ProjectsCard ind={6} img={'/boulevard.webp'} title={'Boulevard'} desc={"Это образовательное учреждение, которое даёт знание на международном уровне."} />
                 </div>
                 <div className='flex justify-center'>
                 <Link className="relative border-[1px] border-main block h-[45px] sm:h-[55px] w-[120px] sm:w-[150px] lg:h-[60px] lg:w-[205px] group" href="/projects">
