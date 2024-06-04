@@ -95,7 +95,7 @@ const Nav = () => {
                 <FaTelegramPlane/>
             </Link>
         </div>
-
+{/* 
         <div className="relative group cursor-pointer">
               <p className={`text-[14px] uppercase flex items-center ${navbarSolid?'text-black':'text-white'}`}>en <BiChevronDown className='text-2xl text-main'/></p>
               <div className="flex-col gap-1 bg-main overflow-hidden text-white text-[12px] lg:text-[14px] px-4 py-2 absolute transition-all duration-300 transform scale-0 top-full left-1/2 -translate-x-1/2 opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:flex">
@@ -109,7 +109,7 @@ const Nav = () => {
                   UZ
                 </button>
               </div>
-        </div>
+        </div> */}
 
 
             <a className='text-white text-[14px] lg:text-xl bg-main p-[5px] lg:p-2' href={'tel:+998712888888'}>
@@ -168,7 +168,7 @@ const Nav = () => {
                             Контакты
                             </Link> 
                         </li>
-                        <li>
+                        {/* <li>
                             <div className="flex justify-start gap-3">
                                 <button className="hover:bg-white sm:text-[16px] text-sm hover:text-black font-bold">
                                 EN
@@ -180,7 +180,7 @@ const Nav = () => {
                                 UZ
                                 </button>
                             </div>
-                        </li>
+                        </li> */}
                         <li>
                             <div className='flex items-center gap-4'>
                                 <Link className={`sm:text-[18px] text-[16px] hover:text-main transition-colors duration-300`} href={'https://business.facebook.com/latest/home?asset_id=866538573482797&nav_ref=push'}>
