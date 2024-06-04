@@ -15,15 +15,14 @@ const Nav = () => {
     const [isOpen,setIsOpen]=useState(false)
     const [isMd,setIsmd]=useState(false)
     const pathname=usePathname()
-    console.log(pathname);
-
+    console.log(pathname.includes('/blog'));
     useEffect(() => {
         const handleScroll = () => {
             const isTop = window.scrollY < 100;
             const size=window.innerWidth>=768;
             size&&setIsOpen(false)
             setIsmd(!size)
-            const isProjectsPage = pathname === '/projects'|| pathname === '/news'; 
+            const isProjectsPage = pathname === '/projects'|| pathname === '/news'|| pathname.includes('/blog'); 
             setNavbarSolid(!isTop || isProjectsPage); 
         };
     

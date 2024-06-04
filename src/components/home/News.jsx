@@ -49,16 +49,16 @@ const News = () => {
                             className='lg:h-[500px] md:h-[450px] sm:h-[380px] h-[350px] w-full '
                 >
                     <SwiperSlide className='news__slide'>
-                        <NewsCard date={'2022-12-31'} img={'/news1.webp'} title={'Компания Discover Invest поздравляет всех с наступающим 2023 годом!'} />
+                        <NewsCard id={'1'} date={'2022-12-31'} img={'/news1.webp'} title={'Компания Discover Invest поздравляет всех с наступающим 2023 годом!'} />
                     </SwiperSlide>
                     <SwiperSlide className='news__slide'>
-                        <NewsCard date={'2022-10-02'} img={'/news2.webp'} title={'ДЕНЬ ПРИНЯТИЯ КОНСТИТУЦИИ РЕСПУБЛИКИ УЗБЕКИСТАН'} />
+                        <NewsCard id={'2'} date={'2022-10-02'} img={'/news2.webp'} title={'ДЕНЬ ПРИНЯТИЯ КОНСТИТУЦИИ РЕСПУБЛИКИ УЗБЕКИСТАН'} />
                     </SwiperSlide>
                     <SwiperSlide className='news__slide'>
-                        <NewsCard date={'2022-12-19'} img={'/news3.webp'} title={'Мы продолжаем знакомить Вас с многофункциональными объектами Discover Invest.'} />
+                        <NewsCard id={'3'} date={'2022-12-19'} img={'/news3.webp'} title={'Мы продолжаем знакомить Вас с многофункциональными объектами Discover Invest.'} />
                     </SwiperSlide>
                     <SwiperSlide className='news__slide'>
-                        <NewsCard date={'2023-01-27'} img={'/news4.webp'} title={'Кто такой менеджер строительного проекта?'} />
+                        <NewsCard id={'4'} date={'2023-01-27'} img={'/news4.webp'} title={'Кто такой менеджер строительного проекта?'} />
                     </SwiperSlide>
                 </Swiper>
             </div>
